@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTET-blog</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="../vendors/bootstrap.css" />
+    <script src="../vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- ---------Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module"
+        integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+        <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">ANTET</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" aria-current="page" href="/index.html" role="button" aria-expanded="false">
+                            TRANG CHỦ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/index.html#blog-intro">Giới thiệu về Blog</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#shop-intro">Giới thiệu về Shop</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#best-recipe">Món ăn đặc biệt nhất</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#best-seller">Sản phẩm bán chạy nhất</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#ctmrs-comments">Nhận xét của khách hàng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" href="/pages/blog.html" role="button" aria-expanded="false">
+                            BLOG
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/pages/blog.html#thit-kho-tau">Thịt kho tàu</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/blog.html#cac-loai-mut">Các loại mứt ngày Tết</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/blog.html#banh-chung">Bánh chưng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="/pages/shop.html" role="button" aria-expanded="false">
+                            CỬA HÀNG
+                        </a>
+                    </li>
+                </ul>
+                <div id="nav-log" class="d-flex border border-dark nav-log">
+                    <a href="/pages/login.html" class="nav-item nav-link">ĐĂNG NHẬP</a>
+                </div>
+                <div id="cart" class="d-flex gap-4 align-items-center">
+                    <a href="/pages/cart.html">
+                        <svg viewBox="0 0 576 512" fill="currentColor">
+                            <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                        </svg>
+                    </a>
+                    <div id="logout">
+                        <svg viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                        </svg>
+                    </div>
+                    <img src="" width="30" height="30" alt="" />
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <img class="carousel-img" src="../assets/blog-elementor.jpg" alt="" />
+
+    <h1 class="blog-title">ANTET BLOG</h1>
+
+    <!-- MAIN-CONTENT -->
+    <!-- -----------CARD 1 -->
+    <div id="thit-kho-tau" class="card" data-aos="fade-right">
+        <img src="../assets/thit-kho-tau.jpeg" class="card-img-top" alt="..." />
+        <div class="card-body d-flex flex-column">
+            <a href="./thit-kho-tau.html" class="card-title card-link text-center mb-0 pb-1">thịt kho tàu</a>
+            <p class="text-center">11/5/2020</p>
+            <p class="card-text text-center">
+                Thịt kho tàu, hay còn gọi là thịt kho hột vị, là một món ăn phổ biến
+                tại miền Nam Việt Nam. Món ăn này đặc biệt thường được chế biến để
+                dùng trong các ngày Tết Nguyên Đán vì có thể làm sẵn, giữ được lâu
+                ngày, nên tiện khi dùng bữa thì dọn ra hâm nóng ăn ngay với cơm không
+                phải bận công nấu nướng trong khi vui Tết.
+            </p>
+            <div class="post-info-bottom d-flex mt-2 pt-3 pb-5">
+                <hr />
+                <div class="info-bottom-item d-flex justify-content-evenly">
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/speech-bubble.png" height="12px" alt="" />
+                        <p class="text-uppercase mb-0 ms-2">3 bình luận</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/heart.png" height="12px" alt="" />
+                        <p class="text-uppercase mb-0 ms-2">6 lượt thích</p>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <!-- ------------CARD 2 -->
+    <div id="cac-loai-mut" class="card" data-aos="fade-left">
+        <!-- carousel -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="../assets/mut-dua.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../assets/mut-gung.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../assets/mut-me.jpg" class="d-block w-100" alt="..." />
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- body -->
+        <div class="card-body d-flex flex-column">
+            <a href="./cac-loai-mut.html" class="card-title card-link text-center mb-0 pb-1">CÁC LOẠI MỨT NGÀY TẾT</a>
+            <p class="text-center">21/9/2021</p>
+            <p class="card-text text-center">
+                Một hình ảnh không thể thiếu trong những ngày Tết cổ truyền Việt Nam
+                chính là những khay đựng mứt, hạt. Ngày Tết, hầu như gia đình nào cũng
+                bày trên bàn khách của mình đủ loại bánh kẹo, mứt Tết.
+            </p>
+            <div class="post-info-bottom d-flex mt-2 pt-3 pb-5">
+                <hr />
+                <div class="info-bottom-item d-flex justify-content-evenly">
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/speech-bubble.png" height="12px" alt="" />
+                        <p class="text-uppercase mb-0 ms-2">3 bình luận</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/heart.png" height="12px" alt="" />
+                        <p class="text-uppercase mb-0 ms-2">6 lượt thích</p>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <!-- ------------CARD 3 -->
+    <div id="chef-quote" class="card align-items-center border border-dark rounded-0 p-5" style="margin-bottom: 64px"
+        data-aos="fade-up">
+        <img src="../assets/quotation-mark.png" class="quotation-mark" alt="..." />
+        <div class="card-body d-flex flex-column pb-0">
+            <h5 class="card-title text-center mb-0 pb-1">
+                "I'M NOT A CHEF. I'M PASSIONATE ABOUT FOOD: THE TRADITION OF IT,
+                COOKING IT, AND SHARING IT."
+            </h5>
+            <p class="text-center mb-0">Zac Posen</p>
+        </div>
+    </div>
+
+    <!-- -------------CARD 4 -->
+    <div id="banh-chung" class="card" data-aos="fade-down">
+        <iframe height="400" src="https://www.youtube.com/embed/KI9qErCHGb4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="card-body d-flex flex-column">
+            <a href="./banh-chung.html" class="card-title card-link text-center mb-0 pb-1">bánh chưng</a>
+            <p class="text-center">19/12/2019</p>
+            <p class="card-text text-center">
+                Bánh chưng là một loại bánh truyền thống của dân tộc Việt nhằm thể
+                hiện lòng biết ơn của con cháu đối với cha ông với đất trời. Nguyên
+                liệu làm bánh chưng gồm gạo nếp, đậu xanh, thịt lợn, lá dong. Bánh
+                thường được làm vào các dịp Tết của dân tộc Việt, cũng như ngày giỗ tổ
+                Hùng Vương.
+            </p>
+            <div class="post-info-bottom d-flex mt-2 pt-3 pb-5">
+                <hr />
+                <div class="info-bottom-item d-flex justify-content-evenly">
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/speech-bubble.png" height="12px" alt="" />
+                        <p class="text-uppercase mb-0 ms-2">3 bình luận</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/heart.png" height="12px" alt="" />
+                        <p class="text-uppercase mb-0 ms-2">6 lượt thích</p>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer" data-aos="fade">
+        <!-- footer column 1 -->
+        <div class="footer-col1">
+            <h1 class="footer-title">ANTET</h1>
+            <p class="footer-text">
+                Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+                liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+            </p>
+            <div class="footer-link">
+                <a href="https://www.facebook.com/profile.php?id=100015427713945" target="_blank"><img
+                        class="contact-icon" src="../assets/facebook.png" alt="" />
+                    <img src="" alt="" /></a>
+                <a href="https://www.instagram.com/tuong2971/" target="_blank"><img class="contact-icon"
+                        src="../assets/instagram.png" alt="" />
+                    <img src="" alt="" /></a>
+                <a href="https://twitter.com/JayceeK18" target="_blank"><img class="contact-icon"
+                        src="../assets/twitter.png" alt="" />
+                    <img src="" alt="" /></a>
+            </div>
+        </div>
+        <!-- footer column 2 -->
+        <div class="footer-col2">
+            <form onsubmit="submitForm(event)">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                        placeholder="Họ và tên" />
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Email" />
+                    <input type="text" class="form-control" id="comment" aria-describedby="emailHelp"
+                        placeholder="Nhận xét" />
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/logout.js" type="module"></script>
+</body>
+
+</html>

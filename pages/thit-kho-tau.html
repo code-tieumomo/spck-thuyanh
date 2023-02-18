@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTET-thịt kho tàu</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="../vendors/bootstrap.css" />
+    <script src="../vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/cac-loai-mut.css" />
+    <link rel="stylesheet" href="../styles/thit-kho-tau.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ---------Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </head>
+  <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">ANTET</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/index.html"
+                role="button"
+                aria-expanded="false"
+              >
+                TRANG CHỦ
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/index.html#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="../pages/blog.html"
+                role="button"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="../pages/shop.html"
+                role="button"
+                aria-expanded="false"
+              >
+                CỬA HÀNG
+              </a>
+            </li>
+          </ul>
+          <div id="nav-log" class="d-flex border border-dark nav-log">
+            <a href="../pages/login.html" class="nav-item nav-link"
+              >ĐĂNG NHẬP</a
+            >
+          </div>
+          <div id="cart" class="d-flex gap-4 align-items-center">
+            <a href="../pages/cart.html">
+              <svg viewBox="0 0 576 512" fill="currentColor">
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                />
+              </svg>
+            </a>
+            <div id="logout">
+              <svg viewBox="0 0 512 512" fill="currentColor">
+                <path
+                  d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                />
+              </svg>
+            </div>
+            <img src="" width="30" height="30" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <img class="carousel-img w-75 m-0" src="../assets/blog-elementor.jpg" alt="" />
+
+    <h1 class="blog-title w-75">ANTET BLOG</h1>
+
+    <!-- MAIN-CONTENT -->
+    <div class="d-flex">
+      <!-- -----------COLUMN LEFT -->
+      <div id="thit-kho-tau" class="card ps-5 pe-4" data-aos="fade-right">
+        <img src="../assets/thit-kho-tau.jpeg" class="card-img-top" alt="..." />
+
+        <div class="card-body d-flex flex-column p-0">
+          <!-- Giới thiệu chung -->
+          <p class="pt-4">11/5/2020</p>
+          <h2 class="card-title card-link pb-1">thịt kho tàu</h2>
+          <p class="card-text">
+            Thịt kho tàu, hay còn gọi là thịt kho hột vị, là một món ăn phổ biến
+            tại miền Nam Việt Nam. Món ăn này đặc biệt thường được chế biến để
+            dùng trong các ngày Tết Nguyên Đán vì có thể làm sẵn, giữ được lâu
+            ngày, nên tiện khi dùng bữa thì dọn ra hâm nóng ăn ngay với cơm
+            không phải bận công nấu nướng trong khi vui Tết.
+          </p>
+
+          <div class="fs-18">
+            <!-- Nguyên liệu -->
+            <div id="nguyen-lieu" class="mb-5">
+              <hr />
+              <h3>Nguyên liệu</h3>
+              <hr />
+
+              <ul>
+                <li>
+                  <a href="./product.html?id=2" class="text-decoration-none"
+                    >Thịt heo 500g</a
+                  >
+                </li>
+                <li>
+                  <a href="./product.html?id=5" class="text-decoration-none"
+                    >Trứng gà</a
+                  >
+                  5 quả
+                </li>
+                <li>Nước dừa 400ml</li>
+                <li>Hành tím băm 1 muỗng canh</li>
+                <li>Tỏi băm 1 muỗng canh</li>
+                <li>Hành lá 1 nhánh</li>
+                <li>
+                  Gia vị:
+                  <a href="./product.html?id=9" class="text-decoration-none"
+                    >nước mắm</a
+                  >
+                  , đường, hạt nêm, tiêu hoặc dùng gói gia vị thịt kho tàu Knorr
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cách chế biến -->
+            <div id="cach-che-bien" class="mb-5">
+              <hr />
+              <h3>Cách chế biến</h3>
+              <hr />
+
+              <!-- ướp thịt -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Ướp thịt</h4>
+              </div>
+              <div>
+                <p>
+                  Nên chọn loại thịt có da mỏng để món ăn ngon, mềm và không bị
+                  ngấy. Để thịt bớt mùi hôi, khi mua về bạn cần
+                  <strong
+                    >ngâm với nước muối loãng, sau đó rửa qua nước lã rồi
+                    thái.</strong
+                  >
+                </p>
+                <p>
+                  <strong>Cho 500g thịt vào tô,</strong>
+                  lần lượt cho
+                  <strong>
+                    1 thìa hành tím băm, 1 thìa tỏi băm, 3 thìa nước mắm, 2 thìa
+                    đường, 1/3 thìa hạt nêm và 1 thìa hạt tiêu vào trộn đều.
+                  </strong>
+                </p>
+                <p>
+                  Sau đó,
+                  <strong>
+                    dùng màng bọc thực phẩm bọc kín bát thịt, ướp khoảng 15 - 20
+                    phút.</strong
+                  >
+                </p>
+                <img class="w-100" src="../assets/uop-thit.jpg" alt="" />
+                <p class="text-center p-1">Ướp thịt</p>
+              </div>
+
+              <!-- luộc trứng -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Luộc trứng</h4>
+              </div>
+              <div>
+                <p>
+                  Trong lúc đợi thịt thấm gia vị,
+                  <strong> bạn cho trứng vào nồi luộc. </strong>
+                  Để trứng đậm và dễ bóc,
+                  <strong> cho vào nồi luộc 1 ít muối hạt. </strong>
+                  Để
+                  <strong> nhiệt độ bếp ở mức vừa phải </strong>
+                  , không nên quá lớn trứng dễ bị vỡ vỏ. Sau khi
+                  <strong>
+                    nước sôi, hạ bớt nhiệt độ xuống, để sôi liu riu trong 7-8
+                    phút là trứng chín
+                  </strong>
+                  tới.
+                </p>
+                <p>
+                  Trứng luộc chín,
+                  <strong>
+                    để nguội rồi bóc vỏ, cho trứng vào bát riêng.
+                  </strong>
+                </p>
+                <img class="w-100" src="../assets/luoc-trung.jpg" alt="" />
+                <p class="text-center p-1">Luộc trứng</p>
+              </div>
+
+              <!-- làm nước màu -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Làm nước màu</h4>
+              </div>
+              <div>
+                <p>
+                  <strong>
+                    Cho đường vào nồi, nấu đến khi đường sôi chuyển màu cánh
+                    gián thì cho một lượng nước vừa đủ vào.
+                  </strong>
+                </p>
+                <p>
+                  Không nên đun đường đến khi chuyển sang màu đen vì khi kho
+                  thịt sẽ bị đắng.
+                </p>
+                <img class="w-100" src="../assets/lam-nuoc-mau.jpg" alt="" />
+                <p class="text-center p-1">Làm nước màu</p>
+              </div>
+
+              <!-- Kho thịt nước dừa tươi -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Kho thịt nước dừa tươi</h4>
+              </div>
+              <div>
+                <p>
+                  Cho thịt đã ướp vào chảo,
+                  <strong>
+                    xào đến khi thịt săn lại thì đổ 400ml nước dừa vào.
+                  </strong>
+                </p>
+                <p>
+                  Đậy nắp nồi, sau đó
+                  <strong> giảm lửa và đun thịt trong 30 phút. </strong>
+                </p>
+                <p>
+                  Sau 30 phút,
+                  <strong>
+                    nước cạn đã vơi thì đổ thêm nước vào, và cho 5 quả trứng vịt
+                    lộn đã luộc chín vào, đậy vung đun thêm 30 phút
+                  </strong>
+
+                  nữa rồi tắt bếp.
+                </p>
+                <img class="w-100" src="../assets/kho-thit.jpg" alt="" />
+                <p class="text-center p-1">Kho thịt nước dừa tươi</p>
+              </div>
+
+              <!-- Thành phẩm -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Thành phẩm</h4>
+              </div>
+              <div>
+                <p>
+                  Cuối cùng, bạn tắt bếp và bày ra đĩa để ăn kèm với các món ăn
+                  khác. Khi thịt nguội hoàn toàn, có thể bảo quản trong tủ lạnh
+                  khoảng 2-3 ngày. Khi đến giờ ăn, bạn chỉ cần nấu thêm vài phút
+                  hoặc cho vào lò vi sóng. Bạn cũng có thể rắc hành lá lên trên
+                  nếu thích.
+                </p>
+                <img class="w-100" src="../assets/thanh-pham.png" alt="" />
+                <p class="text-center p-1">Thành phẩm</p>
+              </div>
+            </div>
+
+            <!-- Thưởng thức -->
+            <div id="thuong-thuc" class="mb-5">
+              <hr />
+              <h3>Thưởng thức</h3>
+              <hr />
+
+              <p>
+                Món thịt kho tàu thơm ngon này đã sẵn sàng và có thể thưởng thức
+                khi còn nóng. Món ăn này có màu nâu rất đẹp mắt và
+                <strong> có hương vị rất hấp dẫn, đậm đà. </strong>
+                Thịt heo hầm mềm, có trứng vịt lộn, có vị béo ngậy và rất ngon!
+              </p>
+              <img class="w-100" src="../assets/thuong-thuc.jpg" alt="" />
+              <p class="text-center p-1">Món thịt kho tàu thơm ngon</p>
+            </div>
+
+            <!-- Những lưu ý khi ướp thịt lợn kho tộ -->
+            <div id="meo-va-luu-y" class="mb-5">
+              <hr />
+              <h3>Những lưu ý khi ướp thịt lợn kho tộ</h3>
+              <hr />
+
+              <p>
+                Nếu có thời gian, bạn nên
+                <strong
+                  >cho thịt đã ướp vào tủ lạnh qua đêm, hôm sau ăn sẽ ngon
+                  hơn.</strong
+                >
+              </p>
+              <p>
+                <strong> Không đổ nước khi nước đường còn nóng, </strong>
+                sẽ khiến hơi nước bốc lên gây bỏng. Bạn cũng nên theo dõi màu
+                của nước đường bằng mắt thường để có độ dẻo trong khi đun tiếp
+                để đạt được màu như ý thì dừng lại nhé.
+              </p>
+              <img class="w-100" src="../assets/meo-va-luu-y.jpg" alt="" />
+              <p class="text-center p-1">
+                Mẹo và lưu ý khi chế biến món thịt lợn kho tộ
+              </p>
+              <p>
+                <strong>
+                  Khi thịt nguội hoàn toàn, có thể bảo quản trong tủ lạnh khoảng
+                  2-3 ngày.
+                </strong>
+                Khi đến giờ ăn, bạn chỉ cần nấu thêm vài phút hoặc cho vào lò vi
+                sóng.
+              </p>
+              <p>
+                Để
+                <strong>
+                  thịt mềm hơn, bạn có thể lót một miếng lá chuối lên trên miếng
+                  thịt.
+                </strong>
+                Lá chuối vừa giúp giữ nhiệt trong nồi vừa hút bọt trong quá
+                trình kho.
+              </p>
+              <p>
+                Bên cạnh đó, trong quá trình kho thịt thì bạn cũng
+                <strong> không nên đậy nắp lại, </strong>
+                để nước thịt kho thành phẩm sẽ được
+                <strong> trong và đẹp mắt hơn. </strong>
+              </p>
+            </div>
+
+            <!-- Giải đáp thắc mắc khi chế biến món thịt kho -->
+            <div id="giai-dap-thac-mac" class="mb-5">
+              <hr />
+              <h3>Giải đáp thắc mắc khi chế biến món thịt kho</h3>
+              <hr />
+
+              <img class="w-100" src="../assets/giai-dap-thac-mac.jpg" alt="" />
+              <p class="text-center p-1">
+                Giải đáp thắc mắc khi chế biến món thịt kho
+              </p>
+
+              <!-- ------------------ -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Có bao nhiêu calo trong thịt kho?</h4>
+              </div>
+              <div>
+                <p>
+                  Theo nghiên cứu của các chuyên gia dinh dưỡng,
+                  <strong> 100g thịt kho tàu có chứa 166,6 calo, </strong>
+                  thành phần dinh dưỡng chính là chất béo.
+                </p>
+                <p>
+                  Cơ thể bạn có thể dung nạp năng lượng
+                  <strong>
+                    từ thịt kho lên đến 440 calo trên 1 bát thịt kho với 300g
+                    thịt heo và trứng.</strong
+                  >
+                </p>
+              </div>
+
+              <!-- ------------------ -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Thịt kho để được bao lâu?</h4>
+              </div>
+              <div>
+                <p>
+                  Thời gian kho thịt kho tàu
+                  <strong
+                    >khoảng 1 tuần, vì nếu để lâu thịt kho sẽ không còn
+                    ngon.</strong
+                  >
+                </p>
+              </div>
+
+              <!-- ------------------ -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">
+                  Trứng cút lộn có thể thay thế thịt kho được không?
+                </h4>
+              </div>
+              <div>
+                <p>
+                  Món thịt kho trứng cút sẽ có một chút thay đổi để món ăn thêm
+                  phần hấp dẫn và ngon miệng.
+                </p>
+              </div>
+
+              <!-- ------------------ -->
+              <div class="d-flex steps-header">
+                <hr class="me-3" />
+                <h4 class="text-black">Ăn gì với thịt kho để không bị ngán?</h4>
+              </div>
+              <div>
+                <p>
+                  <strong> Thịt kho ăn cùng với cơm trắng </strong>
+                  sẽ là sự lựa chọn đã quá quen thuộc với chúng ta. Nếu bạn muốn
+                  <strong>
+                    ăn thịt kho bớt ngán hãy dùng chung với đồ chua,
+                  </strong>
+                  vị béo của thịt quyện chung với đồ chua vừa giòn vừa chua ngọt
+                  chống ngán hiệu quả. Ngoài ra,
+                  <strong> ăn kèm với rau sống </strong>
+                  sẽ khiến món ăn thêm phần hấp dẫn, loại bỏ được vị béo của
+                  thịt kho, giúp Tết thêm vui với những món ngon.
+                </p>
+              </div>
+
+              <p class="fst-italic">
+                Vậy là chỉ với vài bí quyết đơn giản bạn đã có ngay nồi thịt kho
+                tàu cực ngon, đảm bảo đã ăn 1 lần sẽ nhớ mãi không quên!
+              </p>
+            </div>
+          </div>
+
+          <!-- bình luật và lượt thích -->
+          <div class="post-info-bottom d-flex mt-2 pt-3 pb-5">
+            <div class="info-bottom-item d-flex justify-content-start">
+              <div class="d-flex align-items-center">
+                <img src="../assets/speech-bubble.png" height="12px" alt="" />
+                <p class="text-uppercase mb-0 ms-2">3 comments</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="../assets/heart.png" height="12px" alt="" />
+                <p class="text-uppercase mb-0 ms-2">6 likes</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN RIGHT -->
+      <div id="col-right" class="w-25 pe-5 ps-4">
+        <!-- giới thiệu -->
+        <div class="widget">
+          <h3>GIỚI THIỆU</h3>
+          <p>
+            Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+            liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+          </p>
+        </div>
+
+        <!-- các mục của blog -->
+        <div class="widget">
+          <h3>BLOG</h3>
+          <ul class="p-0 list-unstyled">
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./thit-kho-tau.html"
+                class="text-decoration-none text-reset"
+                >Thịt kho tàu</a
+              >
+            </li>
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./cac-loai-mut.html"
+                class="text-decoration-none text-reset"
+                >Các loại mứt</a
+              >
+            </li>
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./banh-chung.html"
+                class="text-decoration-none text-reset"
+                >Bánh chưng</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- các mục của trang -->
+        <div class="widget">
+          <h3>THỊT KHO TÀU</h3>
+          <ul class="p-0 list-unstyled">
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./thit-kho-tau.html#nguyen-lieu"
+                class="text-decoration-none text-reset"
+                >Nguyên liệu</a
+              >
+            </li>
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./thit-kho-tau.html#cach-che-bien"
+                class="text-decoration-none text-reset"
+                >Cách chế biến</a
+              >
+            </li>
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./thit-kho-tau.html#thuong-thuc"
+                class="text-decoration-none text-reset"
+                >Thưởng thức</a
+              >
+            </li>
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./thit-kho-tau.html#meo-va-luu-y"
+                class="text-decoration-none text-reset"
+                >Những lưu ý khi ướp thịt lợn kho tộ</a
+              >
+            </li>
+            <li class="widget-ele-link">
+              <hr />
+              <a
+                href="./thit-kho-tau.html#giai-dap-thac-mac"
+                class="text-decoration-none text-reset"
+                >Giải đáp thắc mắc khi chế biến món thịt kho</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer" data-aos="fade">
+      <!-- footer column 1 -->
+      <div class="footer-col1">
+        <h1 class="footer-title">ANTET</h1>
+        <p class="footer-text">
+          Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+          liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+        </p>
+        <div class="footer-link">
+          <a
+            href="https://www.facebook.com/profile.php?id=100015427713945"
+            target="_blank"
+            ><img class="contact-icon" src="../assets/facebook.png" alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
+            ><img class="contact-icon" src="../assets/instagram.png" alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://twitter.com/JayceeK18" target="_blank"
+            ><img class="contact-icon" src="../assets/twitter.png" alt="" />
+            <img src="" alt=""
+          /></a>
+        </div>
+      </div>
+      <!-- footer column 2 -->
+      <div class="footer-col2">
+        <form onsubmit="submitForm(event)">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+              placeholder="Họ và tên"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="comment"
+              aria-describedby="emailHelp"
+              placeholder="Nhận xét"
+            />
+            <button type="submit" class="btn btn-primary">Gửi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/logout.js" type="module"></script>
+  </body>
+</html>

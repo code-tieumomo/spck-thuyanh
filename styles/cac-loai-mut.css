@@ -1,0 +1,11 @@
+.widget-ele-link:hover {
+    text-decoration: line-through;
+}
+
+.steps-header hr{
+    border-top: 1px solid #e43d34;
+}
+
+.additional-link:hover a {
+text-decoration: line-through !important;
+}

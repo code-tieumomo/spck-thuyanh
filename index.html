@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTET</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="./vendors/bootstrap.css" />
+    <script src="./vendors/bootstrap.js"></script>
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/shop.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module"
+        integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+        <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">ANTET</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" aria-current="page" href="/index.html" role="button" aria-expanded="false">
+                            TRANG CHỦ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/index.html#blog-intro">Giới thiệu về Blog</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#shop-intro">Giới thiệu về Shop</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#best-recipe">Món ăn đặc biệt nhất</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#best-seller">Sản phẩm bán chạy nhất</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/index.html#ctmrs-comments">Nhận xét của khách hàng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./pages/blog.html" role="button" aria-expanded="false">
+                            BLOG
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./pages/blog.html#thit-kho-tauu">Thịt kho tàu</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./pages/blog.html#cac-loai-mut">Các loại mứt ngày Tết</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./pages/blog.html#banh-chung">Bánh chưng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./pages/shop.html" role="button" aria-expanded="false">
+                            CỬA HÀNG
+                        </a>
+                    </li>
+                </ul>
+                <div id="nav-log" class="d-flex border border-dark nav-log">
+                    <a href="./pages/login.html" class="nav-item nav-link">ĐĂNG NHẬP</a>
+                </div>
+                <div id="cart" class="d-flex gap-4 align-items-center">
+                    <a href="./pages/cart.html">
+                        <svg viewBox="0 0 576 512" fill="currentColor">
+                            <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                        </svg>
+                    </a>
+                    <div id="logout">
+                        <svg viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                        </svg>
+                    </div>
+                    <img src="" width="30" height="30" alt="" />
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SOCIAL SIDEBAR -->
+    <div class="social-sidebar" id="ss-left">
+        <div class="ss-inner">
+            <a href="https://www.instagram.com/tuong2971/" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/JayceeK18" target="_blank">TWITTER</a>
+            <a href="https://www.facebook.com/profile.php?id=100015427713945" target="_blank">FACEBOOK</a>
+        </div>
+    </div>
+    <div class="social-sidebar" id="ss-right">
+        <div class="ss-inner">
+            <a href="">LIÊN HỆ</a>
+            <a href="">0951376428</a>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/carousel 1.png" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>ANTET</h5>
+                    <p>
+                        Hãy cùng chúng tôi chế biến những món ăn thật ngon cho dịp Tết
+                        nhé!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel 2.png" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>ANTET BLOG</h5>
+                    <p>
+                        Nơi chúng tôi sẽ chia sẻ cho bạn những công thức món ăn truyền
+                        thống dịp Tết
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel 3.png" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>ANTET SHOP</h5>
+                    <p>
+                        Chúng tôi cung cấp những nguyên liệu tươi sạch, đa dạng cho bữa ăn
+                        của bạn và gia đình
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- CARD 1: blog introduction -->
+    <div id="blog-intro" class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./assets/blog-review.jpg" class="img-fluid w-100 h-100" alt="..." data-aos="fade-up" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="subtitle">CÙNG THỬ</p>
+                    <h1 class="card-title">
+                        CÔNG THỨC <br />
+                        CỦA CHÚNG TÔI
+                    </h1>
+                    <p class="card-text">
+                        ANTET chia sẻ với bạn những công thức chế biến <br />
+                        đơn giản, độc đáo nhưng vẫn mang đậm truyền thống Việt.
+                    </p>
+                    <a class="page-link-btn" href="./pages/blog.html">CHI TIẾT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 2: shop introduction -->
+    <div id="shop-intro" class="card mb-3">
+        <div class="row g-0" style="flex-direction: row-reverse">
+            <div class="col-md-4" style="justify-content: right">
+                <img style="position: relative; z-index: 1" src="./assets/shop-review.jpg" class="img-fluid w-100 h-100"
+                    alt="..." data-aos="fade-up" />
+            </div>
+            <div class="col-md-8 spec-8">
+                <div class="card-body">
+                    <p class="subtitle">TÌM THẤY</p>
+                    <h1 class="card-title">
+                        NGUYÊN LIỆU <br />
+                        TỐT NHẤT
+                    </h1>
+                    <p class="card-text">
+                        Chúng tôi cung cấp những nguyên liệu tươi sống đã được kiểm duyệt,
+                        gia vị truyền thống đặc trưng cho từng món ăn.
+                    </p>
+                    <div>
+                        <a class="page-link-btn" href="./pages/shop.html">Cửa hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- shop catagories -->
+    <div id="three-catagories-col">
+        <div class="three-catagories-col-ele">
+            <div class="tcc-card" data-aos="fade-up">
+                <img width="67" height="43"
+                    src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-6.png"
+                    class="" alt="..." />
+                <div class="card-body">
+                    <h3 class="tcc-card-title">THỊT KHO TRỨNG</h3>
+                    <p class="tcc-card-text">
+                        Thịt mỡ heo kho với nước cốt dừa và trứng vịt thơm ngon
+                    </p>
+                </div>
+            </div>
+            <div class="tcc-img">
+                <img src="./assets/thit-kho-tau-2.jpg" alt="" data-aos="fade-up" class="w-100" height="200" />
+            </div>
+        </div>
+
+        <div class="three-catagories-col-ele" style="flex-direction: column-reverse">
+            <div class="tcc-card" data-aos="fade-up">
+                <img width="67" height="43"
+                    src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-6.png"
+                    class="" alt="..." />
+                <div class="card-body">
+                    <h3 class="tcc-card-title">BÁNH CHƯNG</h3>
+                    <p class="tcc-card-text">
+                        Kết hợp giữa vỏ nếp dẻo thơm và nhân thịt heo béo mềm
+                    </p>
+                </div>
+            </div>
+            <div class="tcc-img special" style="padding: 0 0 80px 0">
+                <img src="./assets/banh-chung-1.jpg" alt="" data-aos="fade-up" class="w-100" height="200" />
+            </div>
+        </div>
+
+        <div class="three-catagories-col-ele">
+            <div class="tcc-card" data-aos="fade-up">
+                <img width="67" height="43"
+                    src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-6.png"
+                    class="" alt="..." />
+                <div class="card-body">
+                    <h3 class="tcc-card-title">MỨT DỪA</h3>
+                    <p class="tcc-card-text">
+                        Sợi cơm dừa phơi khô giòn giòn dược áo lớp đường ngọt dịu
+                    </p>
+                </div>
+            </div>
+            <div class="tcc-img">
+                <img src="./assets/mut-dua-2.jpg" alt="" data-aos="fade-up" class="w-100" height="200" />
+            </div>
+        </div>
+    </div>
+
+    <!-- BEST RECIPE -->
+    <div id="best-recipe" data-aos="fade-down">
+        <h6 class="best-subtitle">NHỮNG MÓN ĂN</h6>
+        <h1 class="best-title">ĐẶC BIỆT NHẤT</h1>
+        <section id="slider">
+            <input type="radio" name="slider" id="s1" checked />
+            <input type="radio" name="slider" id="s2" />
+            <input type="radio" name="slider" id="s3" />
+            <input type="radio" name="slider" id="s4" />
+            <input type="radio" name="slider" id="s5" />
+
+            <label for="s1" id="slide1"></label>
+            <label for="s2" id="slide2"></label>
+            <label for="s3" id="slide3"></label>
+            <label for="s4" id="slide4"></label>
+            <label for="s5" id="slide5"></label>
+        </section>
+    </div>
+
+    <!-- BEST SELLER -->
+    <div id="best-seller" data-aos="fade-up">
+        <h6 class="best-subtitle">NHỮNG SẢN PHẨM</h6>
+        <h1 class="best-title">BÁN CHẠY NHẤT</h1>
+        <ul id="products-list" class="list d-flex flex-wrap px-3 list-unstyled">
+            <li class="list-item">
+                <div class="overflow-hidden">
+                    <img class="product-img" src="./assets/thịt heo.png" />
+                </div>
+                <div class="card-body d-flex flex-column text-center mt-3">
+                    <a target="_blank" class="product-name justify-content-center mb-2"
+                        href="./pages/product.html?id=2">
+                        thịt heo 500g
+                    </a>
+                    <span class="product-price w-100 mb-2">89000đ</span>
+                    <button data-redirect="shop" class="border bg-transparent py-2 text-uppercase fw-semibold">
+                        Đến Cửa hàng
+                    </button>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="overflow-hidden">
+                    <img class="product-img" src="./assets/gạo ST25.jpg" />
+                </div>
+                <div class="card-body d-flex flex-column text-center mt-3">
+                    <a target="_blank" class="product-name justify-content-center mb-2"
+                        href="./pages/product.html?id=3">
+                        gạo st-25 5kg
+                    </a>
+                    <span class="product-price w-100 mb-2">190000đ</span>
+                    <button data-redirect="shop" class="border bg-transparent py-2 text-uppercase fw-semibold">
+                        Đến Cửa hàng
+                    </button>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="overflow-hidden">
+                    <img class="product-img" src="./assets/trứng.png" />
+                </div>
+                <div class="card-body d-flex flex-column text-center mt-3">
+                    <a target="_blank" class="product-name justify-content-center mb-2"
+                        href="./pages/product.html?id=5">
+                        1 vỉ trứng gà
+                    </a>
+                    <span class="product-price w-100 mb-2">60000</span>
+                    <button data-redirect="shop" class="border bg-transparent py-2 text-uppercase fw-semibold">
+                        Đến Cửa hàng
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CUSTOMERS COMMENTS -->
+    <div id="ctmrs-comments" data-aos="fade-left">
+        <div class="ctmrs-cmt-body">
+            <h5 class="ctmrs-cmt-title">HAPPY CUSTOMERS</h5>
+            <p class="ctmrs-cmt-text">
+                ANTET là một trang web cực kì hữu ích, nó giúp tôi tự tin hơn khi vào
+                bếp nấu những bữa ăn cho gia đình vào ngày Tết.
+            </p>
+        </div>
+        <img style="width: 120px; height: 68px" src="./assets/signature.jpg" class="card-img-top" alt="..." />
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer" data-aos="fade">
+        <!-- footer column 1 -->
+        <div class="footer-col1">
+            <h1 class="footer-title">ANTET</h1>
+            <p class="footer-text">
+                Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+                liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+            </p>
+            <div class="footer-link">
+                <a href="https://www.facebook.com/profile.php?id=100015427713945" target="_blank"><img
+                        class="contact-icon" src="./assets/facebook.png" alt="" />
+                    <img src="" alt="" /></a>
+                <a href="https://www.instagram.com/tuong2971/" target="_blank"><img class="contact-icon"
+                        src="./assets/instagram.png" alt="" />
+                    <img src="" alt="" /></a>
+                <a href="https://twitter.com/JayceeK18" target="_blank"><img class="contact-icon"
+                        src="./assets/twitter.png" alt="" />
+                    <img src="" alt="" /></a>
+            </div>
+        </div>
+        <!-- footer column 2 -->
+        <div class="footer-col2">
+            <form onsubmit="submitForm(event)" id="myForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                        placeholder="Họ và tên" />
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Email" />
+                    <input type="text" class="form-control" id="comment" aria-describedby="emailHelp"
+                        placeholder="Nhận xét" />
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/home.js"></script>
+    <script src="./scripts/logout.js" type="module"></script>
+</body>
+
+</html>

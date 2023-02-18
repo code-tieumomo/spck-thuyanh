@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTET-cửa hàng</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="../vendors/bootstrap.css" />
+    <script src="../vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/shop.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ---------Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </head>
+  <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">ANTET</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/index.html"
+                role="button"
+                aria-expanded="false"
+              >
+                TRANG CHỦ
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/index.html#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="../pages/blog.html"
+                role="button"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="../pages/shop.html"
+                role="button"
+                aria-expanded="false"
+              >
+                CỬA HÀNG
+              </a>
+            </li>
+          </ul>
+          <div id="nav-log" class="d-flex border border-dark nav-log">
+            <a href="../pages/login.html" class="nav-item nav-link">ĐĂNG NHẬP</a>
+          </div>
+          <div id="cart" class="d-flex gap-4 align-items-center">
+            <a href="../pages/cart.html">
+              <svg viewBox="0 0 576 512" fill="currentColor">
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                />
+              </svg>
+            </a>
+            <div id="logout">
+              <svg viewBox="0 0 512 512" fill="currentColor">
+                <path
+                  d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                />
+              </svg>
+            </div>
+            <img src="" width="30" height="30" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CARD IMAGE -->
+    <div
+      id="elementor"
+      class="d-flex align-items-center justify-content-center"
+    >
+      <div id="elementor-overlay"></div>
+      <h1>CART</h1>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="container">
+      <div id="header" class="d-flex justify-content-between cart-items-header mb-5">
+        <h6 id="name" class="thumbnail-image justify-content-end text-center">Tên sản phẩm</h6>
+        <h6 id="price" class="w-10">Giá</h6>
+        <h6 id="quantity" class="w-10">Số lượng</h6>
+        <h6 id="subtotal" class="w-10 text-center">Tổng</h6>
+      </div>
+      <!-- PRODUCT DETAIL -->
+      <div id="cart-items" class="d-flex flex-column gap-3"></div>
+      <div class="d-flex justify-content-end mt-5">
+        <button id="pay" class="btn">Thanh toán</button>
+      </div>
+    </div>
+
+    <script src="./../scripts/index.js"></script>
+    <script src="./../scripts/logout.js" type="module"></script>
+
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+    <div id="error-message"></div>
+
+    <script>
+      const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+      });
+      const isSuccess = params.success == "true";
+      const products = JSON.parse(localStorage.getItem("products"));
+      const user = JSON.parse(localStorage.getItem("user"));
+      const cartName = `cart-${user.uid}`;
+      let cart = JSON.parse(localStorage.getItem(cartName)) || [];
+      if (isSuccess) {
+        localStorage.removeItem(cartName);
+        window.location.href = ".....";
+      }
+
+      function removeItem(id) {
+        cart = cart.filter((item) => item.id != id);
+        localStorage.setItem(cartName, JSON.stringify(cart));
+        window.location.reload();
+      }
+
+      (function () {
+
+        if (cart.length < 1) {
+          document.querySelector("#cart-items").innerHTML = `
+            <div class="d-flex justify-content-center align-items-center">
+              <h3>Không có sản phẩm nào trong giỏ hàng</h3>
+            </div>
+          `;
+          document.querySelector("#header")?.remove();
+          document.querySelector("#pay")?.remove();
+        } else {
+          cart.forEach((item) => {
+            const product = products[item.id];
+            document.querySelector("#cart-items").innerHTML += `
+              <div class="row align-items-center border-bottom pb-4">
+                <div class="thumbnail-image">
+                  <button class="btn btn-danger" onclick="removeItem(${
+                    item.id
+                  })">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="#878787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                  </button>
+                  <img class="cart-image" src="${product.image}" alt="" />
+                  <h3 class="cart-name">${product.name}</h3>
+                </div>
+                <div class="product-price w-10">
+                  <h3 class="cart-price">${product.price}</h3>
+                </div>
+                <div class="product-quantity w-10">
+                  <h3 class="cart-price">${item.quantity}</h3>
+                </div>
+                <div class="Subtotal w-10 justify-content-start">
+                  <h3 class="cart-price">${(
+                    product.price * item.quantity
+                  ).toLocaleString()}</h3>
+                </div>
+              </div>
+            `;
+          });
+
+          var stripe = Stripe(
+            "pk_test_51MXz1DIUvPZxN8XgPaldfNDQARsEQRhPEsUsep7VddkZvMfrabLAq7s9dshr5NdVCFsXavL6EE9MMPwyuR5S27bW000KkPBGqf"
+          );
+
+          var checkoutButton = document.getElementById("pay");
+          checkoutButton.addEventListener("click", function () {
+            /*
+             * When the customer clicks on the button, redirect
+             * them to Checkout.
+             */
+            stripe
+              .redirectToCheckout({
+                lineItems: cart.map((item) => ({
+                  price: products[item.id].stripeId,
+                  quantity: Number(item.quantity),
+                })),
+                mode: "payment",
+                /*
+                 * Do not rely on the redirect to the successUrl for fulfilling
+                 * purchases, customers may not always reach the success_url after
+                 * a successful payment.
+                 * Instead use one of the strategies described in
+                 * https://stripe.com/docs/payments/checkout/fulfill-orders
+                 */
+                successUrl:
+                `${location.origin}/pages/success.html`,
+                cancelUrl:
+                `${location.origin}/pages/failure.html`,
+              })
+              .then(function (result) {
+                if (result.error) {
+                  /*
+                   * If `redirectToCheckout` fails due to a browser or network
+                   * error, display the localized error message to your customer.
+                   */
+                  var displayError = document.getElementById("error-message");
+                  displayError.textContent = result.error.message;
+                }
+              });
+          });
+        }
+      })();
+
+      // NAVBAR đổi màu
+      const navbarElement = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        const position = window.scrollY;
+        if (position >= 450) {
+          navbarElement.classList.add("has-bg");
+        } else {
+          navbarElement.classList.remove("has-bg");
+        }
+      });
+    </script>
+
+    <!-- FOOTER -->
+    <div class="footer" data-aos="fade">
+      <!-- footer column 1 -->
+      <div class="footer-col1">
+        <h1 class="footer-title">ANTET</h1>
+        <p class="footer-text">
+          Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+          liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+        </p>
+        <div class="footer-link">
+          <a
+            href="https://www.facebook.com/profile.php?id=100015427713945"
+            target="_blank"
+            ><img
+              class="contact-icon"
+              src="../assets/facebook.png"
+              alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
+            ><img
+              class="contact-icon"
+              src="../assets/instagram.png"
+              alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://twitter.com/JayceeK18" target="_blank"
+            ><img
+              class="contact-icon"
+              src="../assets/twitter.png"
+              alt="" />
+            <img src="" alt=""
+          /></a>
+        </div>
+      </div>
+      <!-- footer column 2 -->
+      <div class="footer-col2">
+        <form onsubmit="submitForm(event)">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+              placeholder="Họ và tên"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="comment"
+              aria-describedby="emailHelp"
+              placeholder="Nhận xét"
+            />
+            <button type="submit" class="btn btn-primary">Gửi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap.js"></script>
+    <!-- Javascript -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/logout.js" type="module"></script>
+  </body>
+</html>

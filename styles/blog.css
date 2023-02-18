@@ -1,0 +1,143 @@
+/* ELEMENTOR */
+.carousel-img {
+  width: 83%;
+  margin: auto;
+}
+
+.blog-title {
+  line-height: 220px;
+  text-align: center;
+  color: #111;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* CARD 1 */
+.card {
+  width: 60%;
+  margin: auto;
+  border: none;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.card-title {
+  position: relative;
+  text-decoration: none;
+  margin: 14px 34px;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition-duration: 0.25s;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+/* Page link hover */
+.card-link:hover {
+  color: #111;
+  cursor: pointer;
+}
+
+.card-link::after {
+  background-color: #333;
+  bottom: 50%;
+  height: 1px;
+  left: 10%;
+  right: 10%;
+  position: absolute;
+  transition-duration: 0.25s;
+  width: inherit;
+  margin: auto;
+}
+
+.card-link:hover::after {
+  transform: scaleX(1);
+}
+
+.card-link::after {
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.post-info-bottom hr {
+  width: 33.3%;
+}
+
+.info-bottom-item {
+  display: table-cell;
+  width: 33.3%;
+  height: 100%;
+  vertical-align: middle;
+  margin: 0 15px;
+}
+
+/* CARD 2 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+}
+
+/* CARD 3 */
+.quotation-mark {
+  width: 15px;
+}
+#chef-quote h5 {
+  font-size: 23px;
+}
+
+/* -----------RESPONSIVE---------- */
+@media screen and (max-width: 1200px) {
+  .info-bottom-item p {
+    width: max-content;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* CARDS */
+  .card {
+    width: 75%;
+    margin-bottom: 50px;
+  }
+  .card-title {
+    font-size: 30px;
+    margin: 14px 10px;
+    line-height: 40px;
+  }
+  .card-text {
+    margin-bottom: 0;
+  }
+  /* chef's quote */
+  #chef-quote {
+    padding: 25px !important;
+  }
+  #chef-quote h5 {
+    margin-top: 0;
+    line-height: 35px;
+  }
+
+  /* POST INFO */
+  .post-info-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+  }
+  .post-info-bottom hr {
+    width: 100%;
+  }
+  .info-bottom-item {
+    width: 100%;
+    justify-content: center !important;
+  }
+  .info-bottom-item div {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+}

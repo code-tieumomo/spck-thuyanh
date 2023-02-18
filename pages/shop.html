@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTET-cửa hàng</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="../vendors/bootstrap.css" />
+    <script src="../vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/shop.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ---------Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </head>
+  <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">ANTET</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/index.html"
+                role="button"
+                aria-expanded="false"
+              >
+                TRANG CHỦ
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/index.html#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="blog.html"
+                role="button"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="../pages/shop.html"
+                role="button"
+                aria-expanded="false"
+              >
+                CỬA HÀNG
+              </a>
+            </li>
+          </ul>
+          <div id="nav-log" class="d-flex border border-dark nav-log">
+            <a href="../pages/login.html" class="nav-item nav-link">ĐĂNG NHẬP</a>
+          </div>
+          <div id="cart" class="d-flex gap-4 align-items-center">
+            <a href="../pages/cart.html">
+              <svg viewBox="0 0 576 512" fill="currentColor">
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                />
+              </svg>
+            </a>
+            <div id="logout">
+              <svg viewBox="0 0 512 512" fill="currentColor">
+                <path
+                  d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                />
+              </svg>
+            </div>
+            <img src="" width="30" height="30" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CARD IMAGE -->
+    <div
+      id="elementor"
+      class="d-flex align-items-center justify-content-center"
+    >
+      <div id="elementor-overlay"></div>
+      <h1>ANTET SHOP</h1>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="body-wrap" class="d-flex w-100 justify-content-center">
+      <!-- PRODUCT LIST - left -->
+      <div id="prod-list-left" data-aos="fade-right">
+        <div class="tool-bar px-4">
+          <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
+          <button
+            id="sort-btn"
+            class="tool-bar-item sort-btn-w border bg-transparent text-center"
+            aria-current="page"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            sắp xếp theo
+          </button>
+          <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
+            <li>
+              <button
+                id="original-order"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tất cả
+              </button>
+            </li>
+            <li>
+              <button
+                id="price-asc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Giá tăng dần
+              </button>
+            </li>
+            <li>
+              <button
+                id="price-desc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Giá giảm dần
+              </button>
+            </li>
+            <li>
+              <button
+                id="name-asc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tên từ A đến Z
+              </button>
+            </li>
+            <li>
+              <button
+                id="name-desc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tên từ Z đến A
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="products-list" class="list">
+          <!-- Render bằng JS ở đây -->
+        </div>
+      </div>
+      <!-- PRODUCT LIST - right -->
+      <div id="prod-list-right" class="catagories" data-aos="fade-left">
+        <button
+          class="tool-bar-item sort-btn-w border bg-transparent text-center float-end"
+          aria-current="page"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Lọc theo
+        </button>
+        <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
+          <li>
+            <button
+              id="all"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Tất cả
+            </button>
+          </li>
+          <li>
+            <button
+              id="rice"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Gạo
+            </button>
+          </li>
+          <li>
+            <button
+              id="leaves"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Lá gói bánh
+            </button>
+          </li>
+          <li>
+            <button
+              id="meat"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Thịt
+            </button>
+          </li>
+          <li>
+            <button
+              id="cha"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Chả
+            </button>
+          </li>
+          <li>
+            <button
+              id="spice"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Gia vị
+            </button>
+          </li>
+          <li>
+            <button
+              id="others"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Khác
+            </button>
+          </li>
+        </ul>
+        <div id="product-catagories" class="mb-4">
+          <h3 class="text-black fs-4 fw-semibold mb-3">DANH MỤC SẢN PHẨM</h3>
+          <ul class="m-0 p-0">
+            <li class="cat-item">Gạo (2)</li>
+            <li class="cat-item">Lá gói bánh (2)</li>
+            <li class="cat-item">Thịt (2)</li>
+            <li class="cat-item">Chả (2)</li>
+            <li class="cat-item">Gia vị (1)</li>
+            <li class="cat-item">Khác (3)</li>
+          </ul>
+        </div>
+        <div id="pop-product" class="mb-4">
+          <h3 class="text-black fs-4 fw-semibold mb-3">BÁN CHẠY NHẤT</h3>
+          <ul class="m-0 p-0">
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/thịt heo.png" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >Thịt heo 500g</a
+                >
+                <span>89000đ</span>
+              </div>
+            </li>
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/gạo ST25.jpg" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >Gạo ST25 5kg</a
+                >
+                <span>190000đ</span>
+              </div>
+            </li>
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/trứng.png" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >1 vỉ trứng gà</a
+                >
+                <span>60000đ</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer" data-aos="fade">
+      <!-- footer column 1 -->
+      <div class="footer-col1">
+        <h1 class="footer-title">ANTET</h1>
+        <p class="footer-text">
+          Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+          liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+        </p>
+        <div class="footer-link">
+          <a
+            href="https://www.facebook.com/profile.php?id=100015427713945"
+            target="_blank"
+            ><img
+              class="contact-icon"
+              src="../assets/facebook.png"
+              alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
+            ><img
+              class="contact-icon"
+              src="../assets/instagram.png"
+              alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://twitter.com/JayceeK18" target="_blank"
+            ><img
+              class="contact-icon"
+              src="../assets/twitter.png"
+              alt="" />
+            <img src="" alt=""
+          /></a>
+        </div>
+      </div>
+      <!-- footer column 2 -->
+      <div class="footer-col2">
+        <form onsubmit="submitForm(event)">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+              placeholder="Họ và tên"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="comment"
+              aria-describedby="emailHelp"
+              placeholder="Nhận xét"
+            />
+            <button type="submit" class="btn btn-primary">Gửi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/shop.js"></script>
+    <script src="../scripts/logout.js" type="module"></script>
+  </body>
+</html>

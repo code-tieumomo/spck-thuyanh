@@ -1,0 +1,33 @@
+body {
+  background-image: url("https://www.itourvn.com/images/easyblog_articles/906/traditional-vietnamese-food-in-saigon-cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+#background-overlay {
+  background-color: #0000007a;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#background-overlay > h1 {
+  font-size: 50px;
+}
+#background-overlay > p {
+    font-size: 20px;
+}
+.page-link-btn {
+    border: 1px solid #fff
+}
+.page-link-btn::after {
+    background-color: #fff;
+}
+.page-link-btn:hover::after {
+    transform: scaleX(1.2);
+  }

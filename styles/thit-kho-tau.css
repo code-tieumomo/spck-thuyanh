@@ -1,0 +1,110 @@
+.card {
+  width: 75%;
+  margin: 0;
+}
+h3 {
+  color: #000;
+}
+.card-title {
+  margin: 0 0 10px 0;
+}
+.page-link-btn:hover::after {
+  transform: none;
+}
+.info-bottom-item {
+    gap: 20px;
+    margin: 0 50px 0 0;
+    width: max-content;
+}
+.post-info-bottom hr {
+    width: 70%;
+}
+
+/* Nguên liệu */
+.fs-18 {
+  font-size: 18px;
+}
+
+/* Cách chế biến */
+.steps-header hr{
+  width: 20px;
+  border-top: 2px solid #e43d34;
+  opacity: unset;
+}
+.w-100 {
+  height: 450px;
+  object-fit: cover;
+  padding: 0 50px;
+  margin-top: 20px;
+}
+
+/* column right */
+.widget-ele-link {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.widget-ele-link hr {
+  width: 5px;
+  border-top: 2px solid #e43d34;
+  opacity: unset;
+  margin: 13px 0;
+
+}
+
+/* Unable page link hover */
+.card-link:hover {
+  color: #111;
+  cursor:unset;
+}
+.card-link:hover::after {
+  transform: none;
+}
+.card-link::after {
+  transform: none;
+}
+.card-link::after {
+  background-color: transparent;
+  height: 0;
+
+  position: absolute;
+  transition-duration: 0.25s;
+  width: inherit;
+  margin: auto;
+}
+
+#col-right {
+  float: right;
+  top: 73px;
+  position: fixed;
+  right: 0px;
+  background-color: white;
+  margin-top: 30px;
+  padding-top: 30px;
+  font-size: 15px;
+  height: calc(100vh - 459px);
+}
+
+@media screen and (max-width: 992px) {
+    #col-right {
+        display: none;
+    }
+
+    .w-75 {
+        width: 100% !important;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+    #thit-kho-tau {
+        padding: 0 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .w-100 {
+    height: 300px;
+  }
+}

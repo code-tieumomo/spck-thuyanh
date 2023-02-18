@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTET-login</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="../vendors/bootstrap.css" />
+    <script src="../vendors/bootstrap.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </head>
+
+  <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col2">
+      <!-- Form -->
+      <form action="">
+        <h1>LOGIN</h1>
+        <!-- Google -->
+        <button
+          id="login"
+          class="btn w-100 justify-content-center"
+          type="button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+            width="20px"
+            height="20px"
+            viewBox="0 0 32 32"
+            version="1.1"
+          >
+            <title>google</title>
+            <path
+              d="M16.601 14.648v4.105h9.813c-0.162 2.008-0.982 3.798-2.243 5.18l0.006-0.007c-1.825 1.86-4.364 3.012-7.172 3.012-0.142 0-0.283-0.003-0.424-0.009l0.020 0.001c-5.946-0.003-10.765-4.823-10.765-10.77 0-0.051 0-0.102 0.001-0.152l-0 0.008c-0.001-0.043-0.001-0.094-0.001-0.145 0-5.946 4.819-10.767 10.765-10.77h0c0.040-0.001 0.087-0.001 0.135-0.001 2.822 0 5.383 1.121 7.262 2.941l-0.003-0.003 2.888-2.888c-2.568-2.578-6.121-4.174-10.047-4.174-0.082 0-0.164 0.001-0.246 0.002l0.012-0c-0.002 0-0.005 0-0.008 0-8.337 0-15.11 6.699-15.228 15.009l-0 0.011c0.118 8.32 6.891 15.020 15.228 15.020 0.003 0 0.006 0 0.009 0h-0c0.169 0.007 0.367 0.012 0.566 0.012 3.892 0 7.407-1.616 9.91-4.213l0.004-0.004c2.208-2.408 3.561-5.63 3.561-9.169 0-0.15-0.002-0.3-0.007-0.449l0.001 0.022c0.001-0.054 0.001-0.119 0.001-0.183 0-0.844-0.079-1.669-0.231-2.469l0.013 0.082z"
+            />
+          </svg>
+          Google
+        </button>
+      </form>
+    </div>
+
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/logout.js" type="module"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithPopup,
+      } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyD_85qtjl7eP_If6pK8eiMTcYbA7_hPC7c",
+        authDomain: "antet-cc8e3.firebaseapp.com",
+        projectId: "antet-cc8e3",
+        storageBucket: "antet-cc8e3.appspot.com",
+        messagingSenderId: "773769450950",
+        appId: "1:773769450950:web:308aeeb3ba933501160ec7",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      const loginBtn = document.getElementById("login");
+      loginBtn.onclick = function () {
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+
+            localStorage.setItem("user", JSON.stringify(user));
+            window.location.href = "/index.html";
+          })
+          .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            console.log(error);
+          });
+      };
+    </script>
+  </body>
+</html>
