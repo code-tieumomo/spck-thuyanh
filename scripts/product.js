@@ -139,3 +139,14 @@ muaBtns.forEach(function (btn) {
     addToCart(id);
   };
 });
+
+// NAVBAR đổi màu
+const navbarElement = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+    const position = window.scrollY;
+    if (position >= 330) {
+        navbarElement.classList.add("has-bg");
+    } else {
+        navbarElement.classList.remove("has-bg");
+    }
+});
